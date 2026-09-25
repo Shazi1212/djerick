@@ -1,0 +1,24 @@
+{
+  "name": "djerick",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/prepare-images.mjs && node scripts/validate-content.mjs && next build",
+    "start": "next start",
+    "validate": "node scripts/validate-content.mjs"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "bootstrap-icons": "1.11.3",
+    "framer-motion": "11.11.17",
+    "marked": "^14.1.4",
+    "next": "^15.5.25",
+    "react": "18.3.1",
+    "react-bootstrap": "2.10.5",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "sharp": "0.33.5"
+  }
+}

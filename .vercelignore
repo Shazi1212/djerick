@@ -1,0 +1,7 @@
+node_modules
+.next
+.vercel
+.image-cache
+public/img
+.setup.log
+package-lock.json
