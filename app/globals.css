@@ -352,19 +352,20 @@ em, .hl { color: var(--magenta); font-style: italic; }
 .prose img { border-radius: 8px; margin: var(--md) 0; }
 .prose hr { border: 0; border-top: 1px solid var(--border); margin: var(--lg) 0; }
 
-/* ─── blog reading highlight: white box + black text on the active paragraph ─── */
+/* ─── blog reading highlight: white box (max. 3 lines) with black text ─── */
 .reader-wrap { position: relative; }
 .prose-reader { position: relative; z-index: 1; }
 .reader-box {
-  position: absolute; left: -18px; right: -18px; top: 0; height: 0; z-index: 0;
+  position: absolute; left: -18px; right: -18px; top: 0; height: 0; z-index: 2; overflow: hidden;
   background: #fff; border-radius: 12px; opacity: 0; pointer-events: none;
   box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
-  transition: transform .45s cubic-bezier(.22, 1, .36, 1), height .45s cubic-bezier(.22, 1, .36, 1), opacity .25s;
+  transition: transform .4s cubic-bezier(.22, 1, .36, 1), height .4s cubic-bezier(.22, 1, .36, 1), opacity .25s;
 }
-.prose-reader.reader-on > :is(p, ul, ol, blockquote, table) { color: rgba(243, 236, 224, .6); transition: color .3s; }
-.prose-reader.reader-on > .is-active { color: #000; }
-.prose-reader.reader-on > .is-active a { color: var(--magenta-deep); }
-.prose-reader.reader-on > .is-active strong { color: #000; }
-.prose-reader.reader-on > .is-active :is(td, th) { color: #000; border-color: #ddd; }
-@media (max-width: 640px) { .reader-box { left: -10px; right: -10px; } }
-@media (prefers-reduced-motion: reduce) { .reader-box { transition: none; } }
+.reader-box .prose-clone { position: absolute; top: 0; left: 18px; color: #000; transition: transform .4s cubic-bezier(.22, 1, .36, 1); user-select: none; }
+.prose-clone, .prose-clone :is(h2, h3, strong, th, td, li, p, blockquote) { color: #000; }
+.prose-clone a { color: var(--magenta-deep); }
+.prose-clone :is(td, th) { border-color: #ddd; }
+.prose-clone img { visibility: hidden; }
+.prose-reader.reader-on > :is(p, ul, ol, blockquote, table) { color: rgba(243, 236, 224, .6); }
+@media (max-width: 640px) { .reader-box { left: -10px; right: -10px; } .reader-box .prose-clone { left: 10px; } }
+@media (prefers-reduced-motion: reduce) { .reader-box, .reader-box .prose-clone { transition: none; } }
