@@ -351,3 +351,20 @@ em, .hl { color: var(--magenta); font-style: italic; }
 .prose th { color: var(--gold); font-weight: 700; letter-spacing: .04em; font-size: 13px; text-transform: uppercase; }
 .prose img { border-radius: 8px; margin: var(--md) 0; }
 .prose hr { border: 0; border-top: 1px solid var(--border); margin: var(--lg) 0; }
+
+/* ─── blog reading highlight: white box + black text on the active paragraph ─── */
+.reader-wrap { position: relative; }
+.prose-reader { position: relative; z-index: 1; }
+.reader-box {
+  position: absolute; left: -18px; right: -18px; top: 0; height: 0; z-index: 0;
+  background: #fff; border-radius: 12px; opacity: 0; pointer-events: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1), height .45s cubic-bezier(.22, 1, .36, 1), opacity .25s;
+}
+.prose-reader.reader-on > :is(p, ul, ol, blockquote, table) { color: rgba(243, 236, 224, .6); transition: color .3s; }
+.prose-reader.reader-on > .is-active { color: #000; }
+.prose-reader.reader-on > .is-active a { color: var(--magenta-deep); }
+.prose-reader.reader-on > .is-active strong { color: #000; }
+.prose-reader.reader-on > .is-active :is(td, th) { color: #000; border-color: #ddd; }
+@media (max-width: 640px) { .reader-box { left: -10px; right: -10px; } }
+@media (prefers-reduced-motion: reduce) { .reader-box { transition: none; } }

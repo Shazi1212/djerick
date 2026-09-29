@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Reveal } from '@/components/Motion';
+import ProseReader from '@/components/ProseReader';
 import { getPost, getPosts, renderPost } from '@/lib/blog';
 import { BIZ } from '@/lib/content';
 
@@ -54,7 +55,7 @@ export default async function Page({ params }) {
       </section>
       <section className="section" style={{ paddingTop: 'var(--lg)' }}>
         <div className="wrap wrap-narrow">
-          <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+          <ProseReader html={html} />
           <div className="contact-card" style={{ marginTop: 'var(--xl)' }}>
             <div className="kicker">Kostenfreies Angebot</div>
             <h3>Sie planen eine Feier in Gießen, Marburg, Frankfurt oder Umgebung?</h3>
