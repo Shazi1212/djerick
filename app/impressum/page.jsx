@@ -14,8 +14,6 @@ export default function Page() {
             {BIZ.fullName}
             <br />
             Inhaltlich verantwortlich / vertreten durch: {BIZ.owner}
-            <br />
-            <span style={{ color: 'var(--warning)' }}>[Straße und Hausnummer, PLZ Ort – bitte ergänzen]</span>
           </address>
           <h3>Kontakt</h3>
           <p>
