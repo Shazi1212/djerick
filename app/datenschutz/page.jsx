@@ -17,8 +17,6 @@ export default function Page() {
           <address>
             {BIZ.owner} – {BIZ.fullName}
             <br />
-            <span style={{ color: 'var(--warning)' }}>[Straße und Hausnummer, PLZ Ort – bitte ergänzen]</span>
-            <br />
             Tel. {BIZ.phone} · <a href={`mailto:${BIZ.email}`}>{BIZ.email}</a>
           </address>
 
