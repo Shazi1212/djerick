@@ -5,6 +5,7 @@ import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { BIZ } from '@/lib/content';
+import { Analytics } from '@vercel/analytics/next';
 
 const display = Bodoni_Moda({
   subsets: ['latin'],
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
         <main id="main">{children}</main>
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <Analytics />
       </body>
     </html>
   );

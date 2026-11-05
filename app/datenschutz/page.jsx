@@ -49,6 +49,18 @@ export default function Page() {
             dem EU-US Data Privacy Framework zertifiziert.
           </p>
 
+          <h3>Webanalyse mit Vercel Web Analytics</h3>
+          <p>
+            Diese Website nutzt Vercel Web Analytics von Vercel Inc. (Anschrift siehe oben), um Seitenaufrufe
+            statistisch auszuwerten. Dabei werden keine Cookies gesetzt. Erfasst werden Zeitpunkt, aufgerufene Seite,
+            Referrer-URL, ungefährer Standort, Betriebssystem, Browser und Gerätetyp. Zur Unterscheidung von Besuchern
+            wird aus der Anfrage ein Hash-Wert gebildet, der nach 24 Stunden verworfen wird. Nach Angaben von Vercel
+            sind die Daten keiner einzelnen Person und keiner IP-Adresse zugeordnet und erlauben keine Verfolgung über
+            andere Websites hinweg. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+            Reichweitenmessung und Verbesserung dieser Website). Sie können dieser Verarbeitung jederzeit widersprechen
+            (Art. 21 DSGVO).
+          </p>
+
           <h3>Schriftarten</h3>
           <p>
             Die verwendeten Schriftarten werden lokal vom Server dieser Website ausgeliefert. Es findet keine
