@@ -30,9 +30,14 @@ export default function Page() {
 
           <h3>Kontaktformular und Kontaktaufnahme</h3>
           <p>
-            Das Kontaktformular auf dieser Website überträgt keine Daten an einen Server. Beim Absenden wird Ihr
-            E-Mail-Programm mit den von Ihnen eingegebenen Angaben geöffnet; der Versand erfolgt ausschließlich über
-            Ihr eigenes E-Mail-Konto. Wenn Sie mich per Telefon oder E-Mail kontaktieren, werden Ihre Angaben zwecks
+            Wenn Sie das Kontaktformular absenden, werden Ihre Angaben (Name, E-Mail-Adresse, optional Telefon, Anlass,
+            Datum, Ort, Gästezahl, Empfehlung und Nachricht) verschlüsselt an den Webserver übertragen und von dort als
+            E-Mail an mein Postfach erick@djerick.de weitergeleitet. Der Webserver speichert die Angaben nicht. Mein
+            E-Mail-Postfach wird von Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland) im Rahmen
+            von Google Workspace betrieben; mit Google besteht ein Vertrag zur Auftragsverarbeitung. Eine Übermittlung
+            in die USA ist dabei nicht auszuschließen; Google ist nach dem EU-US Data Privacy Framework zertifiziert.
+            Falls der Versand über den Server nicht möglich ist, öffnet sich stattdessen Ihr E-Mail-Programm mit den
+            eingegebenen Angaben. Wenn Sie mich per Telefon oder E-Mail kontaktieren, werden Ihre Angaben zwecks
             Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. Diese Daten gebe ich nicht ohne
             Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
           </p>
